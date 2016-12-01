@@ -6,7 +6,7 @@ this code need python 3.5 ([python 3.5](https://www.python.org/downloads/release
 
 clone this repository and run it on your terminal shell
 ```sh
-$ cd lexicalAnalyzer
+$ cd lexical-analyzer
 $ python3.5 tahap2.py
 ```
 
