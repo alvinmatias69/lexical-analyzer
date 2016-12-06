@@ -11,7 +11,7 @@ def validate(x):
 	else:
 		stack.append('#')
 		state = 'q1'
-		# print(arr)
+		print(arr)
 		for x in range(len(arr)):
 			if state == 'q1':
 				if arr[x] == 1:
@@ -20,6 +20,8 @@ def validate(x):
 					stack.append('9')
 				elif arr[x] == 6:
 					stack.append('6')
+				elif arr[x] ==  2:
+					state = 'q1'
 				else:
 					stack.append('err')
 			elif state == 'q2':
@@ -31,6 +33,8 @@ def validate(x):
 					stack.pop()
 					state = 'q1'
 				elif arr[x] == 3 or arr[x] == 4 or arr[x] == 5 or arr[x] == 8:
+					if stack[-1] == '6':
+						stack.append('err')
 					state = 'q1'
 			if x == len(arr) - 1 and stack[-1] == '#':
 				state = 'qx'
